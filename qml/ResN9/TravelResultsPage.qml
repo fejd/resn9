@@ -97,6 +97,10 @@ Page {
         }
 
         var todaysDate = getTravelDate();
+
+        /* Let's have a 10 min margin for preceding departures */
+        todaysDate.setTime(todaysDate.getTime() - 10*60*1000)
+
         var year = todaysDate.getFullYear();
         var month = todaysDate.getMonth() + 1;
         var day = todaysDate.getDate();
