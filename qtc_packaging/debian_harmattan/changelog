@@ -1,5 +1,12 @@
+resn9 (0.9.1) unstable; urgency=low
+
+  * Rätt ikoner visas nu för de olika färdsätten.
+  * Sökningar använder nu en marginal för att fånga upp avgångar med en viss försening (10 min).
+
+ -- Fredrik Henricsson <fredrik.henricsson@gmail.com>  Mon, 30 Dec 2013 01:42:00 +0100
+
 resn9 (0.9.0) unstable; urgency=low
 
   * Första versionen av Resa i Skåne.
 
- -- Fredrik Henricsson <fredrik.henricsson@gmail.comn>  Sat, 23 Feb 2013 23:30:26 +0100
+ -- Fredrik Henricsson <fredrik.henricsson@gmail.com>  Sat, 23 Feb 2013 23:30:26 +0100

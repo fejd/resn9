@@ -62,7 +62,7 @@ Page {
         anchors.centerIn: parent
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
-        text: "Resa i Skåne version 0.9\n\nUtvecklad av Fredrik Henricsson\n\nTågikonen ursprungligen från The Noun Project\nmed en CC BY 3.0-licens\n\nTrafikdata från Skånetrafikens Open API"
+        text: "Resa i Skåne version 0.9.1\n\nUtvecklad av Fredrik Henricsson\n\nTågikonen ursprungligen från The Noun Project\nmed en CC BY 3.0-licens\n\nTrafikdata från Skånetrafikens Open API"
         color: "white"
     }
 

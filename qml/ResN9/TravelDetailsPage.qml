@@ -145,7 +145,7 @@ Page {
                         font.pixelSize: 20
                         verticalAlignment: Text.AlignVCenter
                         color: "black"
-                        text: (LineTypeId < 16 || LineTypeId > 32) ? LineName : TrainNo
+                        text: isLineTypeIdTrain(LineTypeId) ? TrainNo : LineName
                         y: travelTypeImage.y
                     }
 
@@ -158,7 +158,6 @@ Page {
                         color: "black"
                         text: LineTypeName
                         y: travelTypeImage.y
-                        visible: LineTypeId !== 16 && LineTypeId !== 32 && LineTypeId !== 0; //Pagatag, Oresundstag, Gang
                     }
 
                     Text {

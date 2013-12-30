@@ -45,15 +45,17 @@ var _travelInfoSeverity = {'CRITICAL' : 4,
                            'NONE' : 1}
 
 _lineTypeImages['0'] = '../images/gang.gif'
-_lineTypeImages['1'] = '../images/stadsbuss.gif'
-_lineTypeImages['2'] = '../images/regionbuss.gif'
-_lineTypeImages['4'] = '../images/skaneexpress.gif'
-_lineTypeImages['8'] = '../images/pendeln.gif'
-_lineTypeImages['16'] = '../images/oresundstag.gif'
-_lineTypeImages['32'] = '../images/pagatagen.gif';
-_lineTypeImages['64'] = '../images/tagbuss.gif';
-_lineTypeImages['128'] = '../images/farjeforbindelser.gif';
-_lineTypeImages['512'] = '../images/bil.gif'; // NOTE: Guessed the .gif name
+_lineTypeImages['1'] = '../images/krosatag.gif'
+_lineTypeImages['2'] = '../images/pagatagexpress.gif'
+_lineTypeImages['4'] = '../images/stadsbuss.gif'
+_lineTypeImages['8'] = '../images/regionbuss.gif'
+_lineTypeImages['16'] = '../images/skaneexpress.gif'
+_lineTypeImages['32'] = '../images/pendeln.gif';
+_lineTypeImages['64'] = '../images/oresundstag.gif';
+_lineTypeImages['128'] = '../images/pagatagen.gif';
+_lineTypeImages['256'] = '../images/tagbuss.gif';
+_lineTypeImages['512'] = '../images/farjeforbindelser.gif';
+_lineTypeImages['1024'] = '../images/flygbuss.gif';
 
 function RouteLinkData(journeyKey, lineTypeId, depTime, arrTime, fromName, toName, depTimeDeviation, depDeviationAffect, arrTimeDeviation, arrDeviationAffect, routeLinkKey, lineName, lineTypeName, towards, trainNo) {
     this.JourneyKey = journeyKey;
@@ -285,4 +287,26 @@ function clearShownDates() {
 
 function imageUrlForLineType(lineTypeId) {
     return _lineTypeImages[lineTypeId]
+}
+
+function isLineTypeIdTrain(lineTypeId) {
+    // Note: Switch statements do not work properly
+    // in QML/JS.
+    var _lineTypeId = Number(lineTypeId)
+    if (_lineTypeId === 0 ||
+            _lineTypeId === 4 ||
+            _lineTypeId === 8 ||
+            _lineTypeId === 16 ||
+            _lineTypeId === 32 ||
+            _lineTypeId === 256 ||
+            _lineTypeId === 512) {
+        return false;
+    } else if (_lineTypeId === 1 ||
+               _lineTypeId === 2 ||
+               _lineTypeId === 64 ||
+               _lineTypeId === 128 ||
+                _lineTypeId === 1024) {
+        return true;
+    }
+    return false;
 }

@@ -113,6 +113,10 @@ PageStackWindow {
         return TravelResultsHelper.addMinutesToDate(date, minutes);
     }
 
+    function isLineTypeIdTrain(lineTypeId) {
+        return TravelResultsHelper.isLineTypeIdTrain(lineTypeId);
+    }
+
     Component.onCompleted: {
         theme.inverted = true
     }
