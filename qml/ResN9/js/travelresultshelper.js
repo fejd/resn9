@@ -299,13 +299,13 @@ function isLineTypeIdTrain(lineTypeId) {
             _lineTypeId === 16 ||
             _lineTypeId === 32 ||
             _lineTypeId === 256 ||
-            _lineTypeId === 512) {
+            _lineTypeId === 512 ||
+            _lineTypeId === 1024) {
         return false;
     } else if (_lineTypeId === 1 ||
                _lineTypeId === 2 ||
                _lineTypeId === 64 ||
-               _lineTypeId === 128 ||
-                _lineTypeId === 1024) {
+               _lineTypeId === 128) {
         return true;
     }
     return false;
